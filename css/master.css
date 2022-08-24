@@ -271,6 +271,10 @@ header nav .toggle-menu {
 
 /* End Landing */
 /* Start Services */
+#services {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
 #services .container .services-container {
   color: white;
   display: grid;
@@ -307,3 +311,73 @@ header nav .toggle-menu {
   }
 }
 /* End Services */
+/* Start Design */
+#design {
+  background-image: url(../image/design-features.jpg);
+  background-size: cover;
+  position: relative;
+}
+#design .container {
+  overflow: hidden;
+}
+#design .overlay {
+  position: absolute;
+  width: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+#design .container img {
+  position: relative;
+  top: 130px;
+}
+#design .container .text {
+  background-color: #0093bdad;
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  width: 50%;
+  padding: 50px;
+  color: white;
+}
+#design .container .text .content h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+#design .container .text .content ul {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#design .container .text .content ul li i {
+  margin-right: 5px;
+}
+@media (max-width: 768px) {
+  #design {
+    background-image: url(../image/design-features.jpg);
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+  }
+  #design .container {
+    overflow: initial;
+  }
+  #design .container img {
+    display: none;
+  }
+  #design .container .text {
+    background-color: #0093bdad;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 50px;
+    color: white;
+  }
+}
+/* End Design */
