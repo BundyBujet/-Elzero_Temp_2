@@ -381,3 +381,62 @@ header nav .toggle-menu {
   }
 }
 /* End Design */
+/* Start Portfolio */
+#portfolio {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+#portfolio .container ul {
+  text-align: center;
+}
+#portfolio .container ul li {
+  color: white;
+  display: inline-block;
+}
+#portfolio .container ul li:not(:last-child) {
+  margin-right: 3rem;
+}
+#portfolio .container ul li:first-child {
+  background-color: var(--main-color);
+  padding: 10px 5px;
+}
+#portfolio .port-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin-top: 5rem;
+  row-gap: 5px;
+}
+#portfolio .port-grid .card {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#portfolio .port-grid .card:hover .text {
+  bottom: 0%;
+  transition-timing-function: ease-in-out;
+}
+#portfolio .port-grid .card:hover img {
+  transform: scale(1.3) rotate(10deg);
+}
+#portfolio .port-grid .card img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+#portfolio .port-grid .card .text {
+  position: absolute;
+  z-index: 99;
+  background-color: white;
+  width: 100%;
+  bottom: -100%;
+  padding: 20px;
+  height: 30%;
+  transition: 0.4s;
+}
+#portfolio .port-grid .card .text span {
+  display: block;
+  margin-top: 5px;
+  color: var(--main-color);
+}
+/* End Portfolio */
