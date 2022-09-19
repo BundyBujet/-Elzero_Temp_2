@@ -90,6 +90,22 @@ ul {
   line-height: 2;
 }
 /* End Component */
+/* Start widget */
+.scroll-to-top {
+  position: fixed;
+  z-index: 999;
+  color: white;
+  background: var(--main-color);
+  width: 40px;
+  border-radius: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  bottom: 15px;
+  right: 15px;
+  align-items: center;
+}
+/* End widget */
 /* Start Header */
 header {
   position: absolute;
@@ -750,7 +766,8 @@ header nav .toggle-menu {
   gap: 1.5rem;
 }
 #pricing .container .plan {
-  background-color: white;
+  background-color: #181a1b;
+  color: #eee;
   height: 500px;
   width: 100%;
   min-width: 260px;
@@ -813,7 +830,8 @@ header nav .toggle-menu {
 #pricing .container .plan .foot button {
   padding: 1.3em;
   border: 1px solid var(--main-color);
-  background-color: white;
+  background-color: #181a1b;
+  color: white;
 }
 #pricing .container .plan .foot {
   width: 100%;
@@ -868,6 +886,7 @@ header nav .toggle-menu {
   width: 100%;
   margin-bottom: 32px;
   padding: 1.3rem;
+  background-color: #3b3b3b;
 }
 #contact .container .contact-info textarea {
   height: 200px;
