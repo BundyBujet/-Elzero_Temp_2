@@ -696,62 +696,329 @@ header nav .toggle-menu {
   margin: 0px;
   border: none;
 }
-
-/* #skills .container .skill .skill-stat .one::before,
-#skills .container .skill .skill-stat .four::before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  border-color: var(--main-color) transparent transparent transparent;
-  border-width: 10px;
-  border-style: solid;
-  right: 7%;
-}
-#skills .container .skill .skill-stat .two::before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  border-color: var(--main-color) transparent transparent transparent;
-  border-width: 10px;
-  border-style: solid;
-  right: 12%;
-}
-#skills .container .skill .skill-stat .three::before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  border-color: var(--main-color) transparent transparent transparent;
-  border-width: 10px;
-  border-style: solid;
-  right: 12%;
-}
-
-#skills .container .skill .skill-stat .one::after,
-#skills .container .skill .skill-stat .four::after {
-  content: "90%";
-  position: absolute;
-  top: -48px;
-  background-color: var(--main-color);
-  padding: 10px;
-  border-radius: 12px;
-  right: 10px;
-}
-#skills .container .skill .skill-stat .two::after {
-  content: "85%";
-  position: absolute;
-  top: -48px;
-  background-color: var(--main-color);
-  padding: 10px;
-  border-radius: 12px;
-  right: 30px;
-}
-#skills .container .skill .skill-stat .three::after {
-  content: "70%";
-  position: absolute;
-  top: -48px;
-  background-color: var(--main-color);
-  padding: 10px;
-  border-radius: 12px;
-  right: 0px;
-} */
 /* End Skills */
+/* Start Quote */
+#quote {
+  height: 200px;
+  background-image: url(../image/quote.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#quote .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#quote .container q {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+#quote .container .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+  top: 0;
+}
+#quote .container span {
+  position: absolute;
+  top: 80%;
+  color: white;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  #quote {
+    height: 400px;
+  }
+  #quote .container span {
+    margin-top: 5px;
+  }
+}
+/* End Quote */
+/* Start Pricing */
+#pricing {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+#pricing .container .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+#pricing .container .plan {
+  background-color: white;
+  height: 500px;
+  width: 100%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#pricing .container .plan .head {
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+#pricing .container .plan .head h3 {
+  font-size: 1.6rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+#pricing .container .plan .head span {
+  position: relative;
+  font-size: 3.6rem;
+  font-weight: 800;
+}
+#pricing .container .plan .head span::before {
+  content: "$";
+  position: absolute;
+  top: 0%;
+  left: -50%;
+  font-weight: 100;
+  font-size: 1.6rem;
+}
+#pricing .container .plan .head span::after {
+  content: "/Mo";
+  position: absolute;
+  bottom: 10%;
+  right: -100%;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+#pricing .container .plan .bod {
+  height: 100%;
+  text-align: center;
+}
+#pricing .container .plan .bod ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+#pricing .container .plan .bod ul li {
+  padding: 15px;
+}
+#pricing .container .plan .bod ul :not(:first-child) {
+  border-top: 1px solid var(--main-color);
+}
+#pricing .container .plan .foot button {
+  padding: 1.3em;
+  border: 1px solid var(--main-color);
+  background-color: white;
+}
+#pricing .container .plan .foot {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid var(--main-color);
+  padding-top: 32px;
+}
+#pricing .container .special {
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+}
+#pricing .container .special p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+#pricing .container .special button {
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 1.2rem;
+}
+/* End Pricing */
+/* Start Contact */
+#contact {
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+}
+#contact .container .contact-frm {
+  width: 100%;
+}
+#contact .container .contact-info {
+  display: flex;
+  color: white;
+}
+@media (max-width: 768px) {
+  #contact .container .contact-info {
+    flex-direction: column-reverse;
+  }
+  #contact .container .contact-info .info {
+    width: 160px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
+#contact .container .contact-info .text-input {
+  border: 1px solid var(--main-color);
+  display: block;
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 1.3rem;
+}
+#contact .container .contact-info textarea {
+  height: 200px;
+}
+#contact .container .contact-info .text-input:focus {
+  outline: none;
+}
+#contact .container .contact-info [type="submit"] {
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 1.2rem;
+}
+#contact .contact-frm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#contact .container .contact-info .info {
+  width: 30%;
+  margin-left: 60px;
+}
+#contact .container .contact-info .info h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+#contact .container .contact-info .info .phone-num {
+  margin-bottom: 100px;
+  line-height: 1.5;
+}
+#contact .container .contact-info .info .address {
+  line-height: 2;
+}
+/* End Contact */
+/* Start Subscription */
+#subscribe {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-image: url(../image/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+#subscribe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+}
+#subscribe .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  #subscribe .container {
+    flex-direction: column;
+  }
+}
+#subscribe form {
+  display: flex;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+}
+#subscribe form i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+#subscribe form input[type="email"] {
+  border: 1px solid white;
+  border-right: none;
+  background: none;
+  padding: 20px 20px 20px 60px;
+  caret-color: var(--main-color);
+  width: calc(100% - 130px);
+}
+#subscribe form input[type="submit"] {
+  width: 130px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-left: none;
+  text-transform: uppercase;
+}
+#subscribe form input[type="email"]:focus,
+#subscribe form input[type="submit"]:focus {
+  outline: none;
+}
+#subscribe form ::placeholder {
+  color: white;
+}
+#subscribe p {
+  line-height: 2;
+  margin-left: 50px;
+}
+@media (max-width: 991px) {
+  #subscribe p {
+    margin: 30px 0 0;
+  }
+}
+/* End Subscription */
+/* Start Footer */
+#footer {
+  padding-top: calc(8rem / 2);
+  padding-bottom: calc(8rem / 2);
+  background-image: url(../image/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+#footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+#footer .container {
+  position: relative;
+}
+#footer img {
+  margin-bottom: 20px;
+}
+#footer p:not(.copyright) {
+  text-transform: uppercase;
+  padding: 20px;
+  border-bottom: 1px solid white;
+  font-size: 22px;
+  width: fit-content;
+  margin: 20px auto;
+}
+#footer .social-icons i {
+  padding: 10px 15px;
+}
+#footer .copyright {
+  margin-top: 60px;
+}
+#footer .copyright span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+/* End Footer */
